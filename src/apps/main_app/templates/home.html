@@ -1,7 +1,8 @@
 {% block content %}
 	<h1>Treasure Gram</h1>
-	<p> {{ treasure_name }} </p>
-	<p> {{ treasure_value }} </p>
-	<input type="number" name="">{{num1}}
-	<input type="number" name="">{{num2}}
+	
+	{% for treasure in treasures %}
+		<p>{{ treasure.name }}</p>
+		<p>{{ treasure.value }}</p>
+	{% endfor %}
 {% endblock %}
