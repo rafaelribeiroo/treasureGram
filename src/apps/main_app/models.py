@@ -21,5 +21,5 @@ class Treasure(models.Model):
             verbose_name_plural='treasures'
 
     def __str__(self):
-    	return name
+    	return self.name
 
