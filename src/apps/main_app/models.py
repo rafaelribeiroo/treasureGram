@@ -17,8 +17,8 @@ class Treasure(models.Model):
 
     class Meta:
             ordering = ['name']
-            verbose_name='treasure'
-            verbose_name_plural='treasures'
+            verbose_name = 'treasure'
+            verbose_name_plural = 'treasures'
 
     def __str__(self):
-    	return self.name
+        return self.name
