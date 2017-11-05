@@ -8,5 +8,5 @@ def home(request):
 
 
 def detail(request, treasure_id):
-    treasure = Treasure.ojects.get(id=treasure_id)
+    treasure = Treasure.objects.get(pk=treasure_id)
     return render(request, 'detail.html', {'treasure': treasure})
