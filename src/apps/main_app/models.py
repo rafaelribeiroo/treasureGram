@@ -4,10 +4,11 @@ Migrate: Applies the migration to the database
 Migrations are like a version control system for your database
 '''
 from django.db import models
+from django.contrib.auth.models import User
 
 
 class Treasure(models.Model):
-
+    user = models.ForeignKey(User)
     name = models.CharField(max_length=100)
     value = models.DecimalField(max_digits=10,
                                 decimal_places=2)
