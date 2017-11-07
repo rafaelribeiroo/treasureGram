@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'src.apps.main_app',
+    'autofixture',
 ]
 
 MIDDLEWARE = [

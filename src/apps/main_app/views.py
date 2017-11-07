@@ -8,8 +8,8 @@ def home(request):
     treasures = Treasure.objects.all()
     form = TreasureForm()
     context = {
-        'form': form,
         'treasures': treasures,
+        'form': form,
     }
     return render(request, 'home.html', context)
 
@@ -20,7 +20,8 @@ def detail(request, treasure_id):
 
 
 def post_treasure(request):
-    form = TreasureForm(request.POST, request.FILES)
-    if form.is_valid():
-        form.save(commit=True)
-    return HttpResponseRedirect('/')
+    if request.method == 'POST':
+        form = TreasureForm(request.POST, request.FILES)
+        if form.is_valid():
+            form.save(commit=False)
+        return HttpResponseRedirect('/')
