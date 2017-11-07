@@ -6,14 +6,16 @@ from .views import (
     detail,
     post_treasure,
     profile,
+    login_view
 )
 
 
 urlpatterns = [
-    url(r'^user/(\w+)/$', profile, name='profile'),
     url(r'^$', home, name='homepage'),
+    url(r'^user/(\w+)/$', profile, name='profile'),
     url(r'([0-9]+)/$', detail, name='detail'),
-    url(r'^post_url/$', post_treasure, name='post_treasure')
+    url(r'^post_url/$', post_treasure, name='post_treasure'),
+    url(r'^login/$', login_view, name='login'),
 ]
 
 if settings.DEBUG:
