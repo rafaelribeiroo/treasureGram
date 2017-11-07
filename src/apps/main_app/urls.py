@@ -5,10 +5,12 @@ from .views import (
     home,
     detail,
     post_treasure,
+    profile,
 )
 
 
 urlpatterns = [
+    url(r'^user/(\w+)/$', profile, name='profile'),
     url(r'^$', home, name='homepage'),
     url(r'([0-9]+)/$', detail, name='detail'),
     url(r'^post_url/$', post_treasure, name='post_treasure')
@@ -16,5 +18,6 @@ urlpatterns = [
 
 if settings.DEBUG:
     urlpatterns += [
-        url(r'^media/(?P<path>.*)$', serve, {'document_root': settings.MEDIA_ROOT,}),
+        url(r'^media/(?P<path>.*)$',
+            serve, {'document_root': settings.MEDIA_ROOT, }),
     ]

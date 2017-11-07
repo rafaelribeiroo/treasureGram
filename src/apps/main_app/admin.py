@@ -4,10 +4,10 @@ from .models import Treasure
 
 @admin.register(Treasure)
 class TreasureAdmin(admin.ModelAdmin):
-    fields = ['name', 'value', 'material', 'location', 'image']
-    list_display = ['id', 'name', 'value', 'material', 'location', 'image']
-    list_filter = ['name', 'value', 'material', 'location', 'image']
-    search_fields = ['name', 'value', 'material', 'location', 'image']
+    fields = ['user', 'name', 'value', 'material', 'location', 'image']
+    list_display = ['user', 'id', 'name', 'value', 'material', 'location', 'image']
+    list_filter = ['user', 'name', 'value', 'material', 'location', 'image']
+    search_fields = ['user', 'name', 'value', 'material', 'location', 'image']
 
     class Meta:
         model = Treasure
