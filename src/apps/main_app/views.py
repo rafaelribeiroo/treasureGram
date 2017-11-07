@@ -20,10 +20,7 @@ def detail(request, treasure_id):
 
 
 def post_treasure(request):
-    form = TreasureForm(request.POST)
+    form = TreasureForm(request.POST or None)
     if form.is_valid():
-        form.save(commit = True)
-    treasure.save()
-
+        form.save(commit=True)
     return HttpResponseRedirect('/')
-
