@@ -7,7 +7,11 @@ from .forms import TreasureForm
 def home(request):
     treasures = Treasure.objects.all()
     form = TreasureForm()
-    return render(request, 'home.html', {'form': form})
+    context = {
+        'form': form,
+        'treasures': treasures,
+    }
+    return render(request, 'home.html', context)
 
 
 def detail(request, treasure_id):
@@ -25,5 +29,5 @@ def post_treasure(request):
                             img_url = form.cleaned_data['img_url'])
     treasure.save()
 
-return HttpResponseRedirect('/')
+    return HttpResponseRedirect('/')
 

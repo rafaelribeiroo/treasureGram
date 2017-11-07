@@ -28,9 +28,26 @@
 			</div>
 
 			{% if forloop.counter|divisibleby:3 %}
-				</div><div class="row">
+				</div><br><br><div class="row">
 			{% endif %}
 		{% endfor %}
+	</div>
+
+	<br><br>
+
+	<div class="treasure panel panel-default">
+		<div class="panel-heading">
+			<h3 class="panel-title">Add Treasure</h3>
+		</div>
+		<div class="panel-body">
+			<form action="post_url/" method="post">
+				{% csrf_token %}
+				{{ form.as_p }}
+				
+				<input type="submit" value="Submit" name="" />
+			</form>
+		</div>
+
 	</div>
 
 {% endblock %}
