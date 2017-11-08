@@ -6,7 +6,8 @@ from .views import (
     detail,
     post_treasure,
     profile,
-    login_view
+    login_view,
+    logout_view,
 )
 
 
@@ -16,6 +17,7 @@ urlpatterns = [
     url(r'([0-9]+)/$', detail, name='detail'),
     url(r'^post_url/$', post_treasure, name='post_treasure'),
     url(r'^login/$', login_view, name='login'),
+    url(r'^logout/$', logout_view, name='logout'),
 ]
 
 if settings.DEBUG:
