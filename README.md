@@ -1,5 +1,5 @@
 
-## treasureGram
+## Treasure Gram
 
 The project will assegurate the explorers storing and allow manipulations in their treasures, as well as identifier explorer, images of treasures and one button to give how many likes you want.
 
@@ -57,7 +57,7 @@ Creating a .env file and attributing the values
 
 ```
 $ sudo vim .env
-SECRET_KEY=copy_here_your_secretkey_without_whitespace_after_before
+SECRET_KEY=paste_here_your_secretkey_without_whitespace_after_before
 DEBUG=TRUE
 ```
 
@@ -70,7 +70,7 @@ $ make run
 
 ## Built With
 
-* [Python](https://www.python.org/) - Programming language, used too to generate a random secretKey
+* [Python](https://www.python.org/) - Programming language
 * [Django](https://www.djangoproject.com/) - The web framework used
 
 ## Screenshots
@@ -90,3 +90,4 @@ Course from [CodeSchool](https://www.codeschool.com/courses/digging-into-django)
 ## Acknowledgments
 
 * Inspiration
+* Learning more about PEP-8
