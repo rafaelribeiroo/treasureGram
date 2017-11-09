@@ -1,4 +1,4 @@
-#treasureGram
+##treasureGram
 
 The project will assegurate the explorers storing and allow manipulations in their treasures, as well as identifier explorer, images of treasures and one button to give how many likes you want.
 
